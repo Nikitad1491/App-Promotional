@@ -353,6 +353,7 @@ template {
 
 body {
   color: #048ca8;
+  text-align: center;
 }
 
 img {
@@ -413,6 +414,20 @@ span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.col {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.col--full {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 
 .main-nav {
@@ -550,6 +565,23 @@ span {
 
 .hero .hero-img {
   display: none;
+}
+
+.sales-points {
+  padding: 10vh 0;
+}
+
+.sales-points .sales-point {
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+}
+
+.sales-points .sales-point:last-of-type {
+  margin-bottom: 0;
+}
+
+.promo {
+  padding-top: 10vh;
 }
 
 .btn {
