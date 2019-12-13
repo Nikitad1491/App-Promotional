@@ -34,14 +34,21 @@ span
   margin: 0 auto
   padding: 2em
   transform: translateY(30%)
-  max-width: 90
+  max-width: 90%
+
+  @media (max-width: 350px)
+    max-width: 100%
 
   @media (min-width: 495px)
     transform: translateY(50%)
+
   & + .bg-primary
     padding-top: 6em
     @media (min-width: 495px)
       padding-top: 8em
+
+  @include for-lg-screen
+    max-width: 700px
 
 .title-footer
   text-transform: uppercase

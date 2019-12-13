@@ -5,10 +5,15 @@
 
 @import abstracts/colors
 @import abstracts/type
+@import abstracts/mixins
+@import abstracts/variables
 
 // 2. vendor
 
 @import vendor/normalize
+
+// to overwrite base styles grid is put forword
+@import layout/grid
 
 // 3. Base styles
 
@@ -16,7 +21,7 @@
 @import base/typography
 
 // 4. Layout
-@import layout/grid
+
 @import layout/nav
 @import layout/header
 @import layout/hero

@@ -5,5 +5,12 @@
   padding-bottom: 8em
   text-align: center
 
-  .hero-img
-      display: none
+@include for-lg-screen
+  .hero
+    text-align: left
+    padding-bottom: 0
+    height: 80vmin
+    min-height: 800px
+
+  .hero-text
+    margin-top: 10vmax
