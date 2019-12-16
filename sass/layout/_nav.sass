@@ -10,20 +10,34 @@
 
   transition: all ease-in-out 250ms
 
+  @include for-lg-screen
+    position: relative
+    flex: auto
+    background: none
+    margin-top: 1em
+    margin-left: 4em
+    text-align: right
+    left: 0
+
   ul
     display: flex
     flex-direction: column
     justify-content: space-around
     height: 100vh
 
-
+    @include for-lg-screen
+      flex-direction: row
+      height: auto
 
   li
     flex: 1 1 auto
     border-bottom: 1px solid rgba(0, 0, 0, .15)
     display: flex
 
-
+    @include for-lg-screen
+      border: none
+      text-align: right
+      display: inline-block
   a
     color: $text-inverse
     text-decoration: none
@@ -31,11 +45,17 @@
     display: flex
     align-items: center
     justify-content: center
+    @include for-lg-screen
+      justify-content: flex-end
+      flex-basis: auto
+      display: inline
 
     &:hover,
     &:focus
       background: rgba(0, 0, 0, .10)
-
+      @include for-lg-screen
+        background: none
+        color: darken($accent, 15%)
 
   &.is-open
     left: 0
@@ -47,6 +67,9 @@
   right: 1em
   top: 1em
   cursor: pointer
+
+  @include for-lg-screen
+    display: none
 
 .hamburger, .hamburger::before, .hamburger::after
   content: ''
